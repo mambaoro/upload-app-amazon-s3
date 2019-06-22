@@ -1,3 +1,5 @@
+// Unused file
+
 const path = require('path');
 
 // eslint-disable-next-line consistent-return
