@@ -80,7 +80,7 @@ function Upload() {
               multiple
             />
             <label htmlFor="file" className="file">
-              Choose files
+              Select files
             </label>
           </DivInput>
           {currentFiles.length > 0 && !limit && (

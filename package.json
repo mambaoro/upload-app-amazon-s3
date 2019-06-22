@@ -1,7 +1,7 @@
 {
-  "name": "react-personal-boilerplate",
+  "name": "upload-app-amazon-s3",
   "version": "",
-  "description": "Personal boilerplate",
+  "description": "Upload app Amazon S3",
   "repository": {
     "type": "git",
     "url": "git://github.com/react-boilerplate/react-boilerplate.git"
