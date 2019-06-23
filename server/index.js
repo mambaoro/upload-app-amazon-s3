@@ -1,9 +1,11 @@
+/* eslint-disable global-require */
 /* eslint consistent-return:0 import/order:0 */
 
 const express = require('express');
 const logger = require('./logger');
 const bodyParser = require('body-parser');
 const path = require('path');
+
 require('dotenv').config();
 
 const argv = require('./argv');
@@ -46,10 +48,10 @@ const uploadFiles = multer({
 app.post('/uploadMultiple', (req, res) => {
   uploadFiles(req, res, error => {
     if (error) {
-      return res.status(400).json({ error });
+      return res.json({ error });
     }
     if (req.files === undefined) {
-      return res.status(400).json('Error: No file selected');
+      return res.json('Error: No file selected');
     }
     const ListFiles = req.files;
     let fileLocation;

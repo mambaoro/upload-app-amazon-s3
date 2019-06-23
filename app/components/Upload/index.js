@@ -10,6 +10,7 @@ import axios from 'axios';
 // import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { PulseLoader } from 'react-spinners';
+import v4 from 'uuid/v4';
 
 function Upload() {
   const [currentFiles, setFiles] = useState([]);
@@ -57,7 +58,6 @@ function Upload() {
                   },
                 });
                 setLoading(false);
-                console.log('res', response);
                 response.status !== 200 &&
                   response.data.error &&
                   setResponseError(true);
@@ -83,7 +83,7 @@ function Upload() {
               Select files
             </label>
           </DivInput>
-          {currentFiles.length > 0 && !limit && (
+          {currentFiles.length > 0 && !limit && !isLoading && (
             <button type="submit" disabled={limit}>
               Upload
             </button>
@@ -94,7 +94,7 @@ function Upload() {
             <h2>Selected files</h2>
             <ul>
               {Object.values(currentFiles).map(file => (
-                <li>
+                <li key={v4()}>
                   <p>{file.name}</p>
                 </li>
               ))}
@@ -108,7 +108,7 @@ function Upload() {
         {responseList && (
           <ul className="data-list">
             {responseList.map(file => (
-              <li>
+              <li key={v4()}>
                 <p>{file.originalname || 'Unknown file name'}</p>
                 <a
                   href={
