@@ -34,6 +34,7 @@ const Section = styled.section`
   border-radius: 0.5rem;
   background: var(--color-bg-presentation);
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  min-width: 25rem;
   h1 {
     color: #302a2e;
     font-size: 2.588rem;

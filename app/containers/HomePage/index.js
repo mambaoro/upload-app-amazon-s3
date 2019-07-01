@@ -14,11 +14,11 @@ function Homepage() {
   return (
     <Container>
       <div className="video-wrapper">
-        <div className="bg">&nbsp;</div>
         <video autoPlay loop muted>
           <source src={space} />
         </video>
       </div>
+      <div className="bg" />
       <Presentation />
       <Upload />
     </Container>
@@ -35,12 +35,12 @@ const Container = styled.div`
     position: fixed;
     min-width: 100vw;
     min-height: 100vh;
-    .bg {
-      background-image: var(--linear-gradient-bg);
-      position: fixed;
-      min-width: 100vw;
-      min-height: 100vh;
-    }
+  }
+  .bg {
+    background-image: var(--linear-gradient-bg);
+    position: fixed;
+    min-width: 100vw;
+    min-height: 100vh;
   }
 `;
 
