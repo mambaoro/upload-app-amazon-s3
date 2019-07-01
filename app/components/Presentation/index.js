@@ -32,7 +32,7 @@ const Section = styled.section`
   padding: 3.5rem;
   margin-right: 10rem;
   border-radius: 0.5rem;
-  background: var(--color-bg-presentation);
+  background: #80d0c7;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   min-width: 25rem;
   h1 {

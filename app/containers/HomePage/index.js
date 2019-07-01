@@ -37,7 +37,11 @@ const Container = styled.div`
     min-height: 100vh;
   }
   .bg {
-    background-image: var(--linear-gradient-bg);
+    background-image: linear-gradient(
+      135deg,
+      rgba(102, 126, 234, 0.8) 0%,
+      rgba(118, 75, 162, 0.8) 100%
+    );
     position: fixed;
     min-width: 100vw;
     min-height: 100vh;

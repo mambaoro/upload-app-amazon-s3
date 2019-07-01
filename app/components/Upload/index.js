@@ -130,7 +130,7 @@ function Upload() {
 }
 
 const cssSharedButton = css`
-  background: var(--color-dark);
+  background: #302a2e;
   border: none;
   border-radius: 5px;
   color: #fff;
@@ -153,7 +153,7 @@ const Section = styled.section`
   min-width: 30rem;
   align-self: center;
   font-size: 1.599rem;
-  background-color: var(--color-bg-presentation);
+  background-color: #80d0c7;
   padding: 3.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -172,13 +172,13 @@ const Section = styled.section`
     margin: 0 auto;
     margin-top: 2.5rem;
     h2 {
-      color: var(--color-dark);
+      color: #302a2e;
       margin-bottom: 1rem;
     }
     li {
       list-style: none;
       margin-top: 1rem;
-      border-bottom: 1px dotted var(--color-dark);
+      border-bottom: 1px dotted #302a2e;
     }
   }
   .data-list {
@@ -186,7 +186,7 @@ const Section = styled.section`
       list-style: none;
     }
     a {
-      color: var(--color-dark);
+      color: #302a2e;
       :hover {
         color: rgba(102, 126, 234, 0.8);
       }
@@ -207,7 +207,11 @@ const Section = styled.section`
       ${cssSharedButton}
       display: block;
       margin: 0 auto;
-      background: var(--linear-gradient-bg);
+      background: linear-gradient(
+        135deg,
+        rgba(102, 126, 234, 0.8) 0%,
+        rgba(118, 75, 162, 0.8) 100%
+      );
       border-radius: 50px;
       overflow: hidden;
       margin-top: 2rem;
