@@ -5,17 +5,6 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-size: 62.5%;
   }
-
-  :root {
-    --color-bg-presentation: #80d0c7;
-    --color-dark: #302a2e;
-    --linear-gradient-bg: linear-gradient(
-        135deg,
-        rgba(102, 126, 234, 0.8) 0%,
-        rgba(118, 75, 162, 0.8) 100%
-      );
-  }
-  
   *,
   *::after,
   *::before,
