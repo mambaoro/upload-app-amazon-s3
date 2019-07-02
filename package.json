@@ -17,12 +17,8 @@
     "preanalyze": "npm run analyze:clean",
     "analyze": "node ./internals/scripts/analyze.js",
     "extract-intl": "node ./internals/scripts/extract-intl.js",
-    "heroku-postbuild": "npm run build",
     "npmcheckversion": "node ./internals/scripts/npmcheckversion.js",
     "preinstall": "npm run npmcheckversion",
-    "prebuild": "npm run build:clean",
-    "build": "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.babel.js --color -p --progress --hide-modules --display-optimization-bailout",
-    "build:clean": "rimraf ./build",
     "start": "cross-env NODE_ENV=development node server",
     "start:nodemon": "sudo nodemon -e js,graphql --exec babel-node ./server/index.js",
     "start:tunnel": "cross-env NODE_ENV=development ENABLE_TUNNEL=true node server",
@@ -46,6 +42,11 @@
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "prettify": "prettier --write"
   },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "IE 10"
+  ],
   "lint-staged": {
     "*.js": [
       "npm run lint:eslint:fix",
@@ -70,6 +71,7 @@
     "compression": "^1.7.4",
     "cors": "^2.8.5",
     "cross-env": "^5.2.0",
+    "dotenv": "^8.0.0",
     "dotenv-webpack": "^1.7.0",
     "express": "^4.17.1",
     "fontfaceobserver": "^2.1.0",
@@ -112,10 +114,11 @@
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.6",
     "babel-plugin-dynamic-import-node": "^2.2.0",
+    "babel-plugin-import": "^1.12.0",
     "babel-plugin-lodash": "^3.3.4",
     "babel-plugin-react-intl": "^3.1.1",
     "babel-plugin-react-transform": "^3.0.0",
-    "babel-plugin-styled-components": "^1.10.0",
+    "babel-plugin-styled-components": "^1.10.6",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "circular-dependency-plugin": "^5.0.2",
     "compare-versions": "^3.4.0",

@@ -70,7 +70,7 @@ function Upload() {
             }
           }}
         >
-          <DivInput>
+          <div>
             <input
               type="file"
               id="file"
@@ -82,7 +82,7 @@ function Upload() {
             <label htmlFor="file" className="file">
               Select files
             </label>
-          </DivInput>
+          </div>
           {currentFiles.length > 0 && !limit && !isLoading && (
             <button type="submit" disabled={limit}>
               Upload
@@ -222,8 +222,6 @@ const Section = styled.section`
     }
   }
 `;
-
-const DivInput = styled.div``;
 
 Upload.propTypes = {};
 

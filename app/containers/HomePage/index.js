@@ -9,7 +9,6 @@ import Presentation from '../../components/Presentation/Loadable';
 import Upload from '../../components/Upload/Loadable';
 import space from '../../video/Space.mp4';
 
-/* eslint-disable react/prefer-stateless-function */
 function Homepage() {
   return (
     <Container>
