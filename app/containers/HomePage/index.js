@@ -5,24 +5,9 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import Upload from '../../components/Upload/Loadable';
 import Presentation from '../../components/Presentation/Loadable';
+import Upload from '../../components/Upload/Loadable';
 import space from '../../video/Space.mp4';
-
-function Homepage() {
-  return (
-    <Container>
-      <div className="video-wrapper">
-        <video autoPlay loop muted>
-          <source src={space} />
-        </video>
-      </div>
-      <div className="bg" />
-      <Presentation />
-      <Upload />
-    </Container>
-  );
-}
 
 const Container = styled.div`
   display: flex;
@@ -46,5 +31,20 @@ const Container = styled.div`
     min-height: 100vh;
   }
 `;
+
+function Homepage() {
+  return (
+    <Container>
+      <div className="video-wrapper">
+        <video autoPlay loop muted>
+          <source src={space} />
+        </video>
+      </div>
+      <div className="bg" />
+      <Presentation />
+      <Upload />
+    </Container>
+  );
+}
 
 export default Homepage;
