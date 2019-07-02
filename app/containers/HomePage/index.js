@@ -5,8 +5,8 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import Presentation from '../../components/Presentation';
-import Upload from '../../components/Upload';
+import Presentation from '../../components/Presentation/Loadable';
+import Upload from '../../components/Upload/Loadable';
 import space from '../../video/Space.mp4';
 
 /* eslint-disable react/prefer-stateless-function */
