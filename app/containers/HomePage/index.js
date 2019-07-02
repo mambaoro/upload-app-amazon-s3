@@ -5,8 +5,8 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import Presentation from '../../components/Presentation/Loadable';
 import Upload from '../../components/Upload/Loadable';
+import Presentation from '../../components/Presentation/Loadable';
 import space from '../../video/Space.mp4';
 
 function Homepage() {
