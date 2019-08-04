@@ -18,8 +18,8 @@ export default function App() {
   return (
     <div>
       <Switch>
-        <Route path="/" component={HomePage} />
-        <Route path="" component={NotFoundPage} />
+        <Route path="/" component={HomePage} data-testid="homepage" />
+        <Route path="" component={NotFoundPage} data-testid="notFoundPage" />
       </Switch>
       <GlobalStyle />
     </div>

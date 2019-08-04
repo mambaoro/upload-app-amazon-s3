@@ -9,8 +9,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 // import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { PulseLoader } from 'react-spinners';
 import v4 from 'uuid/v4';
+import PulseLoader from '../PulseLoader/Loadable';
 
 function Upload() {
   const [currentFiles, setFiles] = useState([]);
@@ -78,6 +78,7 @@ function Upload() {
               onChange={handleFile}
               name="files"
               multiple
+              data-testid="input"
             />
             <label htmlFor="file" className="file">
               Select files
@@ -90,7 +91,7 @@ function Upload() {
           )}
         </form>
         {currentFiles.length > 0 && (
-          <div className="currentFiles">
+          <div className="currentFiles" data-testid="currentFilesDiv">
             <h2>Selected files</h2>
             <ul>
               {Object.values(currentFiles).map(file => (
@@ -102,9 +103,11 @@ function Upload() {
           </div>
         )}
         <div className="spinner">
-          <PulseLoader color="#fafafa" loading={isLoading} />
+          <PulseLoader color="#fafafa" isLoading={isLoading} />
         </div>
-        {responseError && <div>An error occurred, try to upload again.</div>}
+        {responseError && (
+          <div data-testid="error">An error occurred, try to upload again.</div>
+        )}
         {responseList && (
           <ul className="data-list">
             {responseList.map(file => (

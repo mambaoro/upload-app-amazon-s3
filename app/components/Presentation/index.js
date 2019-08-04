@@ -10,8 +10,8 @@ import styled from 'styled-components';
 
 function Presentation() {
   return (
-    <Section>
-      <article>
+    <Section data-testid="section">
+      <article data-testid="article">
         <h1>Hi, it&apos;s Mamadou Baoro</h1>
         <p>
           In this application you can upload multiple files to the powerful
